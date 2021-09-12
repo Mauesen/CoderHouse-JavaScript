@@ -31,95 +31,10 @@ const comic8 = new Comic('Jojo GoldenWind', 'Araki', 25, 'Fantasía');
 
 const comicsArray = [comic1, comic2, comic3, comic4, comic5, comic6, comic7, comic8];
 
-localStorage.clear();
-
-for (let index = 0; index < comicsArray.length; index++) {
-
-
-    localStorage.setItem('comic' + (index + 1), JSON.stringify(comicsArray[index]))
-
-}
-
-
-
-
+/* localStorage.clear(); */
 
 
 //MANEJO DEL DOM
-
-const listaComics = document.getElementById('lista-comics');
-
-function nuevoItem (nombre) {
-    
-    
-    let item = document.createElement("li");
-    let itemTexto = document.createTextNode(nombre);
-
-    item.appendChild(itemTexto);
-    listaComics.appendChild(item);
-}
-
-
-
-for (let i = 0; i < localStorage.length; i++) {
-
-    var clave = localStorage.key(i);
-    var valor = JSON.parse(localStorage.getItem(clave));
-
-    console.log(valor.nombre);
-
-    nuevoItem(valor.nombre);
-
-
-};
-
-
-let agregarComic = document.getElementById('btn-agregar');
-
-agregarComic.addEventListener("click", agregarComics);
-
-function agregarComics(e) {
-    
-    e.preventDefault();
-
-    
-    let nombre = document.getElementById('nombre').value;
-    let autor = document.getElementById('autor').value;
-    let numeros = document.getElementById('numeros').value;
-    let genero = document.getElementById('genero').value;
-
-    let nuevoComic = new Comic(nombre, autor, numeros, genero);
-    
-    let i = localStorage.length;
-
-    console.log('localstorage legth: ' + i);
-
-    localStorage.setItem('comic' + (i + 1), JSON.stringify(nuevoComic));
-
-    nuevoItem(nombre);
-
-    console.log(nombre, autor, numeros, genero);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const contenedor = document.getElementsByClassName('recomendacion-personalizada')[0];
 
@@ -158,6 +73,79 @@ noRecCol.innerHTML = `
 //MENU INICIAL
 
 
+/* let nombre = prompt('¿Cómo te llamas?');
+
+alert('Hola ' + nombre + ', Bienvenido a WebComicSite. \n¿Qué desea hacer?'); */
+
+let menu = 3;
+
+/* do {
+
+    let opcion = parseInt(prompt('1-Listar Comics \n2-Agregar un Comic \n3-Salir '));
+
+    for (let index = 0; index < comicsArray.length; index++) {
+
+
+        localStorage.setItem('comic' + (index + 1), JSON.stringify(comicsArray[index]))
+
+    }
+
+    switch (opcion) {
+        case 1:
+
+            let lista = [];
+
+            console.log(localStorage.length)
+
+            for (let i = 0; i < localStorage.length; i++) {
+
+                var clave = localStorage.key(i);
+                var valor = JSON.parse(localStorage.getItem(clave));
+
+                console.log(valor.nombre);
+                lista.push((i + 1) + '-' + valor['nombre'] + ' // ' + valor['autor']);
+            };
+
+            console.log(lista);
+
+            lista2 = lista.join('\n');
+
+            alert(lista2);
+
+
+            break;
+
+        case 2:
+
+            let n = prompt('Ingrese el nombre del cómic');
+            let a = prompt('Ingrese el autor del cómic');
+            let p = parseInt(prompt('Ingrese la cantidad de números publicados'));
+            let g = prompt('Ingrese el genero del cómic');
+
+            let i = localStorage.length;
+
+            console.log('localstorage legth: ' + i);
+
+            nuevoComic = new Comic(n, a, p, g);
+            localStorage.setItem('comic' + (i + 1), JSON.stringify(nuevoComic));
+
+
+            break;
+        case 3:
+
+            menu = 3;
+
+            break;
+
+
+
+        default:
+            alert('Debés indicar un número del menú.');
+            break;
+    }
+
+} while (menu != 3);
+ */
 
 let botonRecomendar = document.getElementById('btn-recomendar');
 
@@ -364,3 +352,13 @@ function recomendar(genero) {
 
 
 }
+
+
+
+
+
+
+
+
+
+
