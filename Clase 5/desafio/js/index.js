@@ -1,4 +1,4 @@
-// CLASE Y VARIABLES
+// CLASE COMIC
 
 class Comic {
 
@@ -20,6 +20,8 @@ class Comic {
 
 }
 
+/* Creacion de 8 comics */
+
 const comic1 = new Comic('Wolverine', 'Millar', 95, 'Ciencia Ficción');
 const comic2 = new Comic('Attack on Titan', 'Isayama', 135, 'Ciencia Ficción');
 const comic3 = new Comic('Batman', 'Snyder', 180, 'Acción');
@@ -29,9 +31,12 @@ const comic6 = new Comic('Demon Slayer', 'Gotouge', 122, 'Terror');
 const comic7 = new Comic('One Piece', 'Oda', 1015, 'Fantasía');
 const comic8 = new Comic('Jojo GoldenWind', 'Araki', 25, 'Fantasía');
 
-const comicsArray = [comic1, comic2, comic3, comic4, comic5, comic6, comic7, comic8];
+const comicsArray = [comic1, comic2, comic3, comic4, comic5, comic6, comic7, comic8]; 
 
-localStorage.clear();
+//localStorage.clear();
+
+
+/* Guardado en localStorage */
 
 for (let index = 0; index < comicsArray.length; index++) {
 
@@ -41,17 +46,13 @@ for (let index = 0; index < comicsArray.length; index++) {
 }
 
 
-
-
-
-
-//MANEJO DEL DOM
+// AGREGAR O QUITAR COMICS
 
 const listaComics = document.getElementById('lista-comics');
 
-function nuevoItem (nombre) {
-    
-    
+function nuevoItem(nombre) {
+
+
     let item = document.createElement("li");
     let itemTexto = document.createTextNode(nombre);
 
@@ -66,7 +67,7 @@ for (let i = 0; i < localStorage.length; i++) {
     var clave = localStorage.key(i);
     var valor = JSON.parse(localStorage.getItem(clave));
 
-    console.log(valor.nombre);
+    //console.log(valor.nombre);
 
     nuevoItem(valor.nombre);
 
@@ -79,17 +80,17 @@ let agregarComic = document.getElementById('btn-agregar');
 agregarComic.addEventListener("click", agregarComics);
 
 function agregarComics(e) {
-    
+
     e.preventDefault();
 
-    
+
     let nombre = document.getElementById('nombre').value;
     let autor = document.getElementById('autor').value;
     let numeros = document.getElementById('numeros').value;
     let genero = document.getElementById('genero').value;
 
     let nuevoComic = new Comic(nombre, autor, numeros, genero);
-    
+
     let i = localStorage.length;
 
     console.log('localstorage legth: ' + i);
@@ -98,28 +99,10 @@ function agregarComics(e) {
 
     nuevoItem(nombre);
 
-    console.log(nombre, autor, numeros, genero);
+    //console.log(nombre, autor, numeros, genero);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//SECCION OBTENER RECOMENDACION
 
 const contenedor = document.getElementsByClassName('recomendacion-personalizada')[0];
 
@@ -132,7 +115,6 @@ contenedor.appendChild(fila);
 let noRecCol = document.createElement('div');
 noRecCol.classList.add("col-md-3", "col-6");
 
-
 fila.appendChild(noRecCol);
 
 noRecCol.innerHTML = `
@@ -143,9 +125,28 @@ noRecCol.innerHTML = `
         
     </div>
 
-    <img class="img-fluid" src="img/sections/novedades/nov2.jpg"
+    <img class="img-fluid" src="img/sections/novedades/q-mark.jpg"
         alt="Comic Novedad Batman">
-        <button id="btn-recomendar" class="btn btn-dark my-2 ">Obtener Recomendación</button>
+    
+        <form >
+                    <div class="form-group">
+                        <label class='my-2' for="genero">Seleccioná tu Género Favorito</label>
+                        <select class="form-control" id="genero-rec">
+                          
+                          <option value="1" >Acción</option>
+                          <option value="2">Terror</option>
+                          <option value="3">Ciencia Ficción</option>
+                          <option value="4">Fantasía</option>
+                          
+                        </select>
+                      </div>
+
+                      <!-- <button type="submit" id="btn-agregar" class="btn btn-dark">Agregar</button> -->
+                      <button type="submit" id="btn-recomendar" class="btn btn-dark my-2 ">Obtener Recomendación</button>
+                </form>
+    
+    
+        
 
 
 </div>
@@ -155,51 +156,42 @@ noRecCol.innerHTML = `
 
 
 
-//MENU INICIAL
-
-
-
 let botonRecomendar = document.getElementById('btn-recomendar');
 
 botonRecomendar.addEventListener('click', recomendarClick);
 
 
+function recomendarClick(e) {
 
-let menu2 = 10;
+
+    e.preventDefault();
 
 
-function recomendarClick() {
+    let generoRec = document.getElementById('genero-rec').value;
 
-    alert('Escribí el número correspondiente a tu género favorito para obtener una recomendación :)');
+    //console.log(generoRec);
 
-    do {
 
-        let genero = parseInt(prompt('1-Acción \n2-Terror \n3-Ciencia Ficción \n4-Fantasía \n5-Salir'));
+    if (generoRec == 1 || generoRec == 2 || generoRec == 3 || generoRec == 4 || generoRec == 5) {
 
-        if (genero == 1 || genero == 2 || genero == 3 || genero == 4 || genero == 5) {
+        recomendar(generoRec);
+    } else {
+        alert('Debés seleccionar un género del menú.')
+    }
 
-            recomendar(genero);
-        } else {
-            alert('Debés indicar un número del menú.')
-        }
 
-    } while (menu2 != 5);
 
 }
 
-function recomendar(genero) {
+function recomendar(generoRec) {
 
+    console.log('funcion recomendar' + generoRec);
 
+    switch (generoRec) {
 
-    const mensaje = (genero, obra) => alert('Si te gusta el género ' + genero + ', te recomendamos que leas ' + obra + '\n\nCheckeá la Sección Recomendados!');
+        case '1':
 
-    switch (genero) {
-
-        case 1:
-
-            mensaje('acción', 'Batman o Superman');
-
-            menu2 = genero;
+            //console.log('genero accion');
 
             fila.innerHTML = `<div class="col-md-3  col-6">
 
@@ -235,11 +227,9 @@ function recomendar(genero) {
 
             break;
 
-        case 2:
+        case '2':
 
-            mensaje('terror', 'Demon Slayer o Preacher');
-
-            menu2 = genero;
+            //console.log('terror', 'Demon Slayer o Preacher');
 
             fila.innerHTML = `<div class="col-md-3  col-6">
 
@@ -274,10 +264,9 @@ function recomendar(genero) {
                                         </div>`;
 
             break;
-        case 3:
+        case '3':
 
-            mensaje('ciencia ficción', 'Wolverine o Attack on Titan');
-            menu2 = genero;
+            //console.log('ciencia ficción', 'Wolverine o Attack on Titan');
 
             fila.innerHTML = `<div class="col-md-3  col-6">
 
@@ -312,10 +301,9 @@ function recomendar(genero) {
                                         </div>`;
 
             break;
-        case 4:
+        case '4':
 
-            mensaje('fantasía', "One Piece o Jojo's Golden WInd");
-            menu2 = genero;
+            //console.log('fantasía', "One Piece o Jojo's Golden WInd");
 
             fila.innerHTML = `<div class="col-md-3  col-6">
 
@@ -350,13 +338,6 @@ function recomendar(genero) {
                                         </div>`;
 
             break;
-
-        case 5:
-
-            menu2 = genero;
-
-            break;
-
 
         default:
             break;
