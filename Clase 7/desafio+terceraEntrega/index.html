@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  Meta etiquetas / SEO -->
+    <!-- Tiene que tener entre 70 y 320 caracteres -->
+    <meta name="description"
+        content="Sitio para leer comics de manera online y gratuita. Puedes valorar comics, leer reseñas y nuetras obras recomendadas.">
+
+    <!-- Keywords - tienem que estar separadas por comas / 15 -->
+    <meta name="keywords"
+        content="comics online, leer comics gratis, comics online gratis, reseñas de comics, leer comics free, web comics, historietas online, historietas gratis, comic digital, historietas digitales">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/general/fav-ico.ico" type="image/x-icon">
+
+    <!-- Open graph -->
+    <meta property="og:title" content="Web Comic Site | Leé comics online gratis">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description"
+        content="Sitio para leer comics de manera online y gratuita. Puedes valorar comics, leer reseñas y nuetras obras recomendadas.">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Fonts -->
+
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Styles -->
+
+    <link rel="stylesheet" href="css/styles.css">
+
+
+
+    <title>Web Comic Site | Leé comics online gratis</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header bg-dark ">
+
+        <!-- Header Interior-->
+        <div class="inner-header container">
+
+            <!-- Nav-bar -->
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+                <a class="navbar-brand" href="#">
+
+                    <img src="img/general/logo.png" class="d-inline-block align-top" alt="Logo WebComicSite">
+
+                </a>
+
+                <h1 class="navbar-brand">
+                    WebComicSite
+                </h1>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav mr-auto">
+
+                        <li class="nav-item ">
+
+                            <a class="nav-link" href="index.html">Inicio </a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#novedades">Novedades</a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="#">Categorías</a>
+
+                        </li>
+
+
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0">
+
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+
+                        <button type="button" class="btn btn-outline-light my-2 my-sm-0 " data-toggle="modal"
+                            data-target="#loginModal">
+                            Iniciar Sesión
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </nav>
+
+            <!-- Nav-bar -->
+
+        </div>
+        <!-- Header Interior-->
+
+        <!-- Log in Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered" role="document">
+
+                <div class="modal-content">
+
+
+                    <div class="modal__header">
+                        <button type="button" class=" close " data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="img/general/modal.jpg" alt="Imagen Login" class="img-fluid">
+
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="d-flex flex-column text-center">
+
+                            <form>
+
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email1"
+                                        placeholder="Ingresá tu correo...">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password1"
+                                        placeholder="Ingresá tu contraseña...">
+                                </div>
+
+                                <button type="button" class="btn btn-dark btn-block btn-round">Iniciar Sesión</button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer d-flex justify-content-center">
+
+                        <div class="signup-section">No estás registrado/a?
+                            <a href="#" class="text-info">
+                                Registrate
+                            </a>.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Log in Modal END -->
+
+
+
+    </header>
+    <!-- Header END -->
+
+    <!-- Main -->
+    <main>
+
+        <!-- Carousel -->
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/general/slider-1.jpg" class="d-block w-100" alt="Imagen Spiderman">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="img/general/slider-2.jpg" class="d-block w-100" alt="Imagen Batman">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="img/general/slider-3.jpg" class="d-block w-100" alt="Imagen One Piece">
+
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Carousel END-->
+
+        <!-- Lista -->
+
+        <section id="novedades">
+
+            <div class="container lista">
+
+                <h2 class="titulo "> Lista </h2>
+
+                <div class="row">
+
+                    <div class="col-md-6 px-5">
+
+                        <ul id="lista-comics">
+
+                        </ul>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <form>
+
+                            <h4 class="text-center">Agregar Comic</h4>
+                            <div class="form-group">
+                              
+                               <label for="nombre">Nombre</label>
+                              <input type="text" class="form-control" id="nombre" >
+                             
+                            </div>
+
+                            <div class="form-group">
+                              
+                                <label for="autor">Autor</label>
+                               <input type="text" class="form-control" id="autor" >
+                              
+                             </div>
+
+                             <div class="form-group">
+                              
+                                <label for="numeros">Números</label>
+                               <input type="number" class="form-control" id="numeros" >
+                              
+                             </div>
+
+                             <div class="form-group">
+                              
+                                <label for="genero">Género</label>
+                               <input type="text" class="form-control" id="genero" >
+                              
+                             </div>
+                           
+                            <button type="submit" id="btn-agregar" class="btn btn-dark">Agregar</button>
+                          </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Ranking Semanal-->
+        <section id="ranking_semanal">
+
+            <div class="container">
+
+                <h2 class="titulo "> Ranking Semanal</h2>
+
+                <div class="row">
+
+                    <div class="top-1 col-md-6 ">
+
+                        <div class="card ">
+
+                            <a href="#">
+                                <img class="img-fluid py-1" src="img/sections/ranking/top1.jpg"
+                                    alt="Comic Puesto 1 One Piece">
+                            </a>
+
+                            <div class="card-header text-center ">
+                                <b>#1</b> - One Piece - Eiichiro Oda
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="top-4 col-md-6 ">
+
+
+                        <div class="row">
+
+
+                            <img src="img/sections/ranking/top2.jpg" alt="Comic Puesto 2 Batman"
+                                class="top-4__img  col-md-6 col-12">
+
+
+                            <div class=" col-md-6 col-12 center "> <a class="no-dec" href="#"><b>#2</b> - Batman -
+                                    Snyder/Capullo</a> </div>
+
+                        </div>
+
+                        <div class="row">
+
+
+
+                            <img src="img/sections/ranking/top3.jpg" alt="Comic Puesto 3 Dragon Ball"
+                                class="top-4__img col-md-6 col-12">
+
+
+
+                            <div class=" col-md-6 col-12 center "> <a class="no-dec" href="#"><b>#3</b> - Dragon Ball -
+                                    Toriyama </a></div>
+
+                        </div>
+
+                        <div class="row">
+
+
+
+                            <img src="img/sections/ranking/top4.jpg" alt="Comic Puesto 4 Wolverine"
+                                class="top-4__img col-md-6 col-12">
+
+
+                            <div class=" col-md-6 col-12 center "> <a class="no-dec" href="#"><b>#4</b> - Wolverine -
+                                    Millar/Jr.Jr</a> </div>
+
+                        </div>
+
+                        <div class="row">
+
+
+
+                            <img src="img/sections/ranking/top5.jpg" alt="Comic Puesto 5 Demon Slayer"
+                                class="top-4__img col-md-6 col-12">
+
+
+                            <div class=" col-md-6 col-12 center "> <a class="no-dec" href="#"><b>#5</b> - Demon Slayer -
+                                    Gotouge</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Ranking Semanal END-->
+
+
+        <!-- Novedades -->
+
+        <section id="novedades">
+
+            <div class="container recomendacion-personalizada">
+
+                <h2 class="titulo "> Recomendados para vos! </h2>
+
+                <div class="row lista-recomendados">
+
+                    
+                </div>
+
+            </div> 
+        </section>
+
+        <!-- Novedades END-->
+
+        <!-- Reseñas Recomendadas -->
+
+       <!--  <section id="reseñas_recomendadas">
+
+            <div class="container ">
+
+                <h2 class="titulo "> Reseñas Recomendadas</h2>
+
+                <div class="row division">
+                    <div class="col-md-6">
+
+                        <img src="img/sections/resena/review1.jpg" alt="Imagen reseña Spiderman"
+                            class=" img-fluid reseña-1__img">
+
+                        <div class=" row center">
+
+                            <a class="no-dec" href="#">
+                                <h3 class="col-12 text-center">SPIDERMAN: TODA UNA VIDA</h3>
+                            </a>
+                            <p class=" col-12 ">¿Y si toda la vida de <b>Spiderman</b> en los cómics del Universo Marvel
+                                hubiera transcurrido en tiempo real?
+                                ¿Y si <b>Peter Parker</b> no hubiera quedado congelado en la treintena y hubiera
+                                envejecido de manera normal?
+                            </p>
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-6 reseñas__video">
+
+                        <div class="row center">
+
+                            <h4 class="col-12 text-center">100% Marvel HC. Spiderman: Toda una vida</h4>
+                            <p class="col-12">Para celebrar el octogésimo aniversario de Marvel, Chip Zdarsky y Mark
+                                Bagley se unen para una historia única de Spidey,
+                                contando su vida de principio a fin,
+                                como si sus casi seis décadas de trayectoria como personaje hubieran transcurrido en
+                                tiempo real.
+                            </p>
+
+                        </div>
+
+
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/s2gPeUQTjec"
+                                allowfullscreen></iframe>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="row division">
+                    <div class="col-md-6">
+
+                        <img src="img/sections/resena/review2.jpg" alt="Imagen reseña Preacher"
+                            class=" img-fluid reseña-1__img">
+
+                        <div class=" row center">
+
+                            <a class="no-dec" href="#">
+                                <h3 class="col-12 text-center">PREACHER: LIBRO 1</h3>
+                            </a>
+                            <p class=" col-12 ">
+                                Jesse Custer es un predicador que acaba de recibir un poder sobrehumano, lo que causó un
+                                desastre tal que destruyo la
+                                iglesia Annieville con casi todo el pueblo adentro, por lo cual Jesse es perseguido como
+                                principal sospechoso de esa matanza,
+                                ese poder sobrenatural consiste en que sus palabras son obedecidas en contra de la
+                                voluntad, lo que el dice se hace.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-6 reseñas__video">
+
+                        <div class="row center">
+
+                            <h4 class="col-12 text-center">El poder de predicar</h4>
+                            <p class="col-12">La explicación de lo que tiene el Reverendo Custer es la siguiente,
+                                en el cielo existe dos grupos de ángeles los Adephi (científicos y encargado de todas
+                                los quehaceres) y los Seraphi (los guerreros),
+                                los Adephi debían mantener encerrado a Génesis,
+                                el fruto del amor de un ángel con un demonio, pero este ente escapa y entra en el cuerpo
+                                de Jesse, es lo que causa la explosión.
+                            </p>
+
+                        </div>
+
+
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/47RoZ4l_QCw"
+                                allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section> -->
+
+        <!-- Reseñas Recomendadas END-->
+
+        <!-- Novedades -->
+
+        <section id="personajes">
+
+            <div class="container">
+
+                <h2 class="titulo "> Personajes de la Semana</h2>
+
+                <div id="personajes-row" class="row">
+
+                    
+
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col">
+
+                        <button id="btn-agregar-personajes" class="btn btn-dark my-3 mx-3">Ver más</button>
+
+                    </div>
+                   
+                </div>
+
+               
+
+            </div>
+        </section>
+
+        <!-- Novedades END-->
+
+    </main>
+
+    <!-- Main END-->
+
+    <!-- Pie de Página -->
+
+    <footer class="footer bg-dark pt-4 ">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase ">Web Comics Site</h6>
+                    <p>
+                        Sitio de lectura comics de manera online y gratuita. Podés valorar comics, leer reseñas y
+                        nuetras
+                        obras recomendadas.
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase">Links útiles</h6>
+
+                    <ul class="list-unstyled">
+
+                        <li>
+                            <a href="#">Categorías</a>
+                        </li>
+
+                        <li>
+                            <a href="#ranking_semanal">Ranking</a>
+                        </li>
+
+                        <li>
+                            <a href="#novedades">Novedades</a>
+                        </li>
+
+                        <li>
+                            <a href="#reseñas_recomendadas">Reseñas</a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3 ">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase">Redes Sociales</h6>
+
+
+                    <!-- Facebook -->
+                    <a href=""><i class="fab fa-facebook social ml-0 "></i></a>
+
+                    <!-- Twitter -->
+
+                    <a href=""><i class="fab fa-twitter social"></i></a>
+
+                    <!--Instagram-->
+
+                    <a href=""><i class="fab fa-instagram social"></i></a>
+
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-white">© 2021 WebComicSite </div>
+
+        <!-- Copyright -->
+
+    </footer>
+
+    <!-- Pie de Página END-->
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fa-all.min.js"></script>
+    <script src="js/fontawesome.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
