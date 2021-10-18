@@ -350,17 +350,67 @@ $(document).ready(function () {
     //Declaramos la url que vamos a usar para el GET
 
 
-    /* const randomID = () =>  Math.floor(Math.random() * (20 - 0)) + 0;
+    const randomID = () =>  Math.floor(Math.random() * (450 - 1)) + 1;
         
      
 
-      let personaje_id = randomID();
-      console.log(personaje_id); */
+      
 
     /* const URLGET = `https://akabab.github.io/superhero-api/api/id/${personaje_id}.json` */
     const personajesFila = $('#personajes-row');
 
-    for (let i = 1; i <= 4; i++) {
+    for (let i = 1; i <= 8; i++) {
+
+        let personaje_id = randomID();
+      console.log(personaje_id);
+
+        $.ajax({
+            method: "GET",
+            url: `https://akabab.github.io/superhero-api/api/id/${personaje_id}.json`,
+            // data: infoPost, 
+            success: function (res) {
+
+                console.log(res);
+                personajesFila.append(`
+                
+               <div class="col-md-3  col-6">
+
+                        <div class="card ">
+                            <div class="card-header text-center">
+                                <a class="no-dec" href="#">${res.name} </a>
+                                <a class="no-dec" href="#"><b>${res.biography.publisher}</b></a>
+                                
+                            </div>
+
+                            <img class="img-fluid" src="${res.images.md}"
+                                alt="Comic Novedad Demon Slayer">
+
+
+                        </div>
+
+                 </div>
+               
+               
+               `)
+
+
+            },
+
+            error: function (){
+
+                console.log(i);
+                i = i - 1;
+                console.log(i);
+            }
+
+            
+        });
+
+        
+
+    }
+
+    /* for (let i = 95; i <= 98; i++) {
 
         $.ajax({
             method: "GET",
@@ -399,48 +449,7 @@ $(document).ready(function () {
 
         
 
-    }
-
-    for (let i = 95; i <= 98; i++) {
-
-        $.ajax({
-            method: "GET",
-            url: `https://akabab.github.io/superhero-api/api/id/${i}.json`,
-            // data: infoPost, 
-            success: function (res) {
-
-                console.log(res);
-                personajesFila.append(`
-                
-               <div class="col-md-3  col-6">
-
-                        <div class="card ">
-                            <div class="card-header text-center">
-                                <a class="no-dec" href="#">${res.name} </a>
-                                <a class="no-dec" href="#"><b>${res.biography.publisher}</b></a>
-                                
-                            </div>
-
-                            <img class="img-fluid" src="${res.images.md}"
-                                alt="Comic Novedad Demon Slayer">
-
-
-                        </div>
-
-                 </div>
-               
-               
-               `)
-
-
-            },
-
-            
-        });
-
-        
-
-    }
+    } */
 
 
 const btnAgregarPersonajes = $('#btn-agregar-personajes');

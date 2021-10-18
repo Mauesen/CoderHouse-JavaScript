@@ -283,7 +283,7 @@ const personajes = () => {
     
         <div class="container">
     
-            <h2 class="titulo "> Personajes de la Semana</h2>
+            <h2 class="titulo "> Conocé nuevos Personajes</h2>
     
             <div id="personajes-row" class="row">
     
@@ -317,7 +317,7 @@ const personajes = () => {
 const recomendados = () => {
     const views = ` <!-- Recomendados -->
 
-    <section id="novedades">
+    <section  id="novedades">
    
        <div class="container recomendacion-personalizada">
    

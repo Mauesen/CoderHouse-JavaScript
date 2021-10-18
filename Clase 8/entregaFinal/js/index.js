@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    console.log('DOM ready');
+    /* console.log('DOM ready'); */
 
 window.addEventListener('hashchange', () => {
     console.log(window.location.hash);
@@ -92,13 +92,20 @@ const router = (hash) => {
 
 
             //Agregar Personajes
+
+            const randomID = () =>  Math.floor(Math.random() * (450 - 1)) + 1;
+        
+
             const personajesFila = $('#personajes-row');
 
-            for (let i = 1; i <= 4; i++) {
+            for (let i = 1; i <= 10; i++) {
+
+                let personaje_id = randomID();
+                /* console.log(personaje_id); */
 
                 $.ajax({
                     method: "GET",
-                    url: `https://akabab.github.io/superhero-api/api/id/${i}.json`,
+                    url: `https://akabab.github.io/superhero-api/api/id/${personaje_id}.json`,
                     // data: infoPost, 
                     success: function (res) {
 
@@ -143,15 +150,18 @@ const router = (hash) => {
 
             function agregarPersonajesClick() {
 
-                for (let i = 448; i <= 451; i++) {
+                for (let i = 1; i <= 10; i++) {
+
+                    let personaje_id = randomID();
+                   /*  console.log(personaje_id); */
 
                     $.ajax({
                         method: "GET",
-                        url: `https://akabab.github.io/superhero-api/api/id/${i}.json`,
+                        url: `https://akabab.github.io/superhero-api/api/id/${personaje_id}.json`,
                         // data: infoPost, 
                         success: function (res) {
 
-                            console.log(res);
+                            /* console.log(res); */
                             personajesFila.append(`
                             
                            <div class="col-md-3  col-6">
