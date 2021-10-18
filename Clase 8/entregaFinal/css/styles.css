@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/* VARIABLES */
+/* General */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 20px 0;
+}
+
+.titulo {
+  color: #e5e2e2;
+  padding: 7px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #343a40;
+  font-size: 1.6em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-white-1 {
+  background-color: #f2f2f2;
+}
+
+.bg-white-2 {
+  background-color: #e6e6e6;
+}
+
+nav h1 {
+  margin-bottom: 0px;
+}
+
+.no-dec {
+  color: black;
+}
+.no-dec:hover {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+/* RANKING SEMANAL*/
+#ranking_semanal {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #cccccc;
+}
+#ranking_semanal .top-1 img {
+  transition: transform 0.3s;
+  border-radius: 20px;
+}
+#ranking_semanal .top-1 img:hover {
+  transform: scale(1.05);
+}
+#ranking_semanal .top-4 img {
+  transition: transform 0.3s;
+  border-radius: 30px;
+  margin: 5px 0;
+}
+#ranking_semanal .top-4 img:hover {
+  transform: scale(1.05);
+}
+#ranking_semanal .card {
+  background: none;
+  border: none;
+}
+#ranking_semanal .card .card-header {
+  background: none;
+  border: none;
+}
+
+/* NOVEDADES */
+#novedades {
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #cccccc;
+}
+#novedades .card {
+  background: none;
+  border: none;
+}
+#novedades .card .card-header {
+  background: none;
+  border: none;
+}
+#novedades img {
+  transition: transform 0.3s;
+  border-radius: 20px;
+}
+#novedades img:hover {
+  transform: scale(1.03);
+}
+
+/* NOVEDADES */
+#personajes {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #cccccc;
+}
+#personajes .card {
+  background: none;
+  border: none;
+}
+#personajes .card .card-header {
+  background: none;
+  border: none;
+}
+#personajes .card .card-header a {
+  display: block;
+}
+#personajes img {
+  transition: transform 0.3s;
+  border-radius: 20px;
+}
+#personajes img:hover {
+  transform: scale(1.03);
+}
+
+/* RESEÑAS RECOMENDADAS*/
+#reseñas_recomendadas {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 0px;
+}
+#reseñas_recomendadas img {
+  border-radius: 20px;
+}
+#reseñas_recomendadas .division {
+  border-bottom: 1px solid #cccccc;
+  padding: 15px 0;
+}
+@media (max-width: 770px) {
+  #reseñas_recomendadas .reseñas__video {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+#reseñas_recomendadas h3 {
+  font-size: 1.5em;
+  padding-top: 10px;
+}
+#reseñas_recomendadas h4 {
+  font-size: 1.4em;
+  padding-top: 10px;
+}
+
+/* PIE DE PÁGINA */
+.footer h6 {
+  color: whitesmoke;
+}
+.footer p {
+  color: #c5c1c1;
+}
+.footer .social {
+  color: #c5c1c1;
+  font-size: 50px;
+  padding: 0 10px;
+}
+.footer .social:hover {
+  color: white;
+}
+.footer li a {
+  text-decoration: none;
+  color: #c5c1c1;
+}
+.footer li a:hover {
+  color: #fffefe;
+}
+
+/* LOGIN MODAL */
+#loginModal .modal__header {
+  position: relative;
+}
+#loginModal .modal__header button {
+  position: absolute;
+  right: 0px;
+}
+
+/* PAGE CATEGORÍAS */
+.categoria .card {
+  background: none;
+  border: none;
+}
+.categoria .card .card-header {
+  background: none;
+  border: none;
+}
+.categoria img {
+  transition: transform 0.3s;
+  border-radius: 20px;
+}
+.categoria img:hover {
+  transform: scale(1.03);
+}
+
+#accion {
+  background: #f2f2f2;
+  border-bottom: 1px solid #cccccc;
+}
+
+#terror {
+  background: #e6e6e6;
+  border-bottom: 1px solid #cccccc;
+}
+
+#ciencia_ficcion {
+  background: #f2f2f2;
+  border-bottom: 1px solid #cccccc;
+}
+
+#fantasia {
+  background: #e6e6e6;
+  border-bottom: 1px solid #cccccc;
+}
+
+.navegacion {
+  background-color: white;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  padding: 5px;
+}
+.navegacion li a {
+  text-decoration: none;
+  color: #c5c1c1;
+  background-color: #333131;
+  border-radius: 10px;
+  margin: 5px 5px;
+}
+.navegacion li a:hover {
+  color: #fffefe;
+}
+.navegacion .dropdown-item {
+  text-decoration: none;
+  color: #333131;
+  background-color: white;
+  border-radius: 0px;
+  margin: 0px;
+}
+
+/* PAGE RESEÑA */
+#reseña {
+  background: #e6e6e6;
+  padding: 0px;
+}
+#reseña .container {
+  background: #f2f2f2;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  padding: 15px;
+}
+#reseña .container img {
+  border-radius: 10px;
+}
+#reseña .container h3 {
+  font-size: 1.5em;
+  padding-top: 10px;
+  margin: 0.5rem 0px;
+}
+#reseña .container h4 {
+  font-size: 1.4em;
+  padding-top: 10px;
+}
+
+/* PAGE COMIC VIEW */
+#comics_list {
+  background: #e6e6e6;
+  padding: 0px;
+}
+#comics_list .container {
+  background: #f2f2f2;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  padding: 15px 15px 0 15px;
+}
+#comics_list .container .titulo {
+  margin-bottom: 0px;
+}
+#comics_list .container .comic_item {
+  padding: 10px 0;
+  border-bottom: 1px solid #cccccc;
+}
+#comics_list .container .comic_item:hover {
+  background-color: #e6e6e6;
+}
+#comics_list .container .comic_item .card {
+  background: none;
+  border: none;
+}
+#comics_list .container .comic_item .card .card-header {
+  background: none;
+  border: none;
+}
+#comics_list .container .comic_item .card img {
+  transition: transform 0.3s;
+  border-radius: 20px;
+}
+#comics_list .container .comic_item .card img:hover {
+  transform: scale(1.03);
+}
+
+/* PAGE REGISTRO */
+#registro {
+  background: #e6e6e6;
+  padding: 0px;
+}
+#registro .container {
+  background: #f2f2f2;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  min-height: 80vh;
+  padding: 15px;
+}
+#registro .container h3 {
+  margin: 0.5rem 0px;
+}
+#registro .container img {
+  border-radius: 10px;
+}
+#registro .container .reg_form {
+  /* background-color: blue; */
+  margin: 15px auto;
+}
+#registro .container .reg_form label {
+  font-weight: bold;
+  color: #343a40;
+}
+
+/*# sourceMappingURL=styles.css.map */
