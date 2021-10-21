@@ -35,9 +35,9 @@ const router = (hash) => {
                 listaComics.append(`<li> ${nombre}</li>`).animate({ "left": "0px" }, "slow");;
             } */
 
-            function nuevoItem(nombre) {
+            function nuevoItem(nombre,autor,numeros,genero) {
 
-                listaComics.append(`<li> ${nombre}</li>`);
+                listaComics.append(`<li class="li-comic"><b>${nombre} </b>#${numeros} -- <b>Autor:</b> ${autor} </li>`);
             }
 
 
@@ -49,7 +49,7 @@ const router = (hash) => {
 
                 //console.log(valor.nombre);
 
-                nuevoItem(valor.nombre);
+                nuevoItem(valor.nombre,valor.autor,valor.numerosPublicados,valor.genero);
 
 
             };
@@ -80,7 +80,7 @@ const router = (hash) => {
 
                 localStorage.setItem('comic' + (i + 1), JSON.stringify(nuevoComic));
 
-                nuevoItem(nombre);
+                nuevoItem(nombre,autor,numeros, genero);
 
                 //console.log(nombre, autor, numeros, genero);
             }

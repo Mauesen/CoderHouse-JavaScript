@@ -335,4 +335,14 @@ nav h1 {
   color: #343a40;
 }
 
+.li-comic{
+
+  text-decoration: none;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #cfcfcf;
+  padding: 5px;
+  margin: 5px 0;
+}
+
 /*# sourceMappingURL=styles.css.map */

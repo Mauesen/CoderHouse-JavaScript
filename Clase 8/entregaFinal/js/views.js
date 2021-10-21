@@ -324,6 +324,8 @@ const recomendados = () => {
            <h2 class="titulo "> Recomendados para vos! </h2>
    
            <div class="row lista-recomendados">
+
+            
    
                
            </div>
@@ -339,7 +341,39 @@ const recomendados = () => {
 }
 
 const notFound = () => {
-    const views = "<h1 style=color: red>Esta pagina no existe</h2>";
+    const views = ` <!-- Recomendados -->
+
+    <section  id="novedades">
+   
+       <div class="container recomendacion-personalizada">
+   
+           <h2 class="titulo "> Página no encontrada. </h2>
+   
+           <div class="row lista-recomendados">
+
+           <div class="col-md-3  col-6">
+
+                <div class="card ">
+                    <div class="card-header text-center">
+                        <a class="no-dec" href="#">Error <b>#404</b></a>
+                        
+                    </div>
+
+                    <img class="img-fluid" src="img/sections/novedades/404.jpg"
+                        alt="Comic Novedad Batman">
+
+
+                </div>
+
+            </div>
+   
+               
+           </div>
+   
+       </div> 
+   </section>
+   
+   <!-- Recomendados END-->`;
     const divNotFound = document.createElement('div')
     divNotFound.innerHTML = views;
 
